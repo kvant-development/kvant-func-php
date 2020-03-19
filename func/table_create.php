@@ -42,9 +42,14 @@ $nn++;
 		$val = $nn;
 	    break;
             case "hash":
-
                 //$kuda = "https://explorer-test.kvant.io/tx/hash/$val";
 		$kuda = $url_e."/blk/hash/$val";
+                $val2 = substr($val,0,5)."...".substr($val,strlen($val)-5);
+                $val = "<a href=\"$kuda\">$val2</a>";
+            break;
+            case "txhash":
+                //$kuda = "https://explorer-test.kvant.io/tx/hash/$val";
+		$kuda = $url_e."/tx/hash/$val";
                 $val2 = substr($val,0,5)."...".substr($val,strlen($val)-5);
                 $val = "<a href=\"$kuda\">$val2</a>";
             break;
@@ -76,6 +81,8 @@ $nn++;
                 $kuda = $url_e."/address/$val";
                 $val = $icon_in."&nbsp;<a href=\"$kuda\">$val2</a>&nbsp;$icon_out";
             break;
+            case "addr_to":
+            case "addr_from":
             case "addr":
                 $val2 = substr($val,0,5)."...".substr($val,37);
 
