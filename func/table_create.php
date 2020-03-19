@@ -56,6 +56,35 @@ $nn++;
                 $kuda = $url_e."/blk/id/$val";
                 $val = "<a href=\"$kuda\">$val</a>";
             break;
+            case "addr_my":
+                $icon_in = "";
+                $icon_out = "";
+                if($wal == $v2[addr_to])
+                {
+                $val = $v2[from];
+                $icon_out = "<i class=\"fa fa-arrow-right text-success\"></i>";
+                }
+                else
+                {
+                $val = $v2[addr_to];
+                $icon_in = "<i class=\"fa fa-arrow-right text-danger\"></i>";
+                }
+
+                $val2 = substr($val,0,5)."...".substr($val,37);
+
+//              $kuda = "https://explorer-test.kvant.io/address/$val";
+                $kuda = $url_e."/address/$val";
+                $val = $icon_in."&nbsp;<a href=\"$kuda\">$val2</a>&nbsp;$icon_out";
+            break;
+            case "addr":
+                $val2 = substr($val,0,5)."...".substr($val,37);
+
+//              $kuda = "https://explorer-test.kvant.io/address/$val";
+                $kuda = $url_e."/address/$val";
+                $val = "<a href=\"$kuda\">$val2</a>";
+            break;
+
+
 
 	    default:
 
