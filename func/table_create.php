@@ -61,11 +61,12 @@ $nn++;
                 $kuda = $url_e."/blk/id/$val";
                 $val = "<a href=\"$kuda\">$val</a>";
             break;
-            case "tid":
-                //$kuda = "https://explorer-test.kvant.io/tx/id/$val";
+            case "nn2":
+//              $kuda = "https://explorer-test.kvant.io/tx/id/$val";
                 $kuda = $url_e."/tx/id/$val";
                 $val = "<a href=\"$kuda\">$val</a>";
             break;
+
             case "addr_my":
                 $icon_in = "";
                 $icon_out = "";
