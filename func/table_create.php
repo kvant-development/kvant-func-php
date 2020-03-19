@@ -83,6 +83,13 @@ $nn++;
                 $kuda = $url_e."/address/$val";
                 $val = "<a href=\"$kuda\">$val2</a>";
             break;
+            case "addr_full":
+//                $val2 = substr($val,0,5)."...".substr($val,37);
+
+//              $kuda = "https://explorer-test.kvant.io/address/$val";
+                $kuda = $url_e."/address/$val";
+                $val = "<a href=\"$kuda\">$val</a>";
+            break;
 
 
 
