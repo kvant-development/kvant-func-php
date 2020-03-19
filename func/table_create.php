@@ -26,8 +26,10 @@ foreach($th as $k=>$v)
     $tbl .= "<td class=\"$k\">".$v."</td>";
 }
 
+$nn = 0;
 foreach($mas as $k=>$v3)
 {
+$nn++;
 
     $td = "";
     reset($th);
@@ -36,7 +38,9 @@ foreach($mas as $k=>$v3)
 	$val = $v3[$k2];
 	switch($k2)
 	{
-	    
+	    case "nn":
+		$val = $nn;
+	    break;
             case "hash":
 
                 //$kuda = "https://explorer-test.kvant.io/tx/hash/$val";
