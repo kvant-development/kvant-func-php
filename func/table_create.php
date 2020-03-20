@@ -26,6 +26,8 @@ foreach($th as $k=>$v)
     $tbl .= "<td class=\"$k\">".$v."</td>";
 }
 
+$tbl .= "</tr></thead><tbody>";
+
 $nn = 0;
 foreach($mas as $k=>$v3)
 {
